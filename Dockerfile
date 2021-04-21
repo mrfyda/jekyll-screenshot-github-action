@@ -4,7 +4,6 @@ RUN apt-get update && apt-get install -y \
     apt-transport-https \
     ca-certificates \
     curl \
-    jekyll \
     fonts-noto-color-emoji \
     gnupg \
     --no-install-recommends \
@@ -24,6 +23,7 @@ RUN python -m pip install -r requirements.txt
 
 USER chrome
 ENV HOME /home/chrome
+ENV PATH="${HOME}/.local/bin:${PATH}"
 WORKDIR /home/chrome
 ADD ./screenshot.py .
 ADD ./override-home.sh .

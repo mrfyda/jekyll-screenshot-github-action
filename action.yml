@@ -1,5 +1,5 @@
-name: 'Jekyll Screenshot'
-description: 'Render the website and save the screenshot'
+name: 'MkDocs Screenshot'
+description: 'Render changes to a MkDocs and screenshots on the pull request'
 runs:
   using: 'docker'
   image: 'Dockerfile'
